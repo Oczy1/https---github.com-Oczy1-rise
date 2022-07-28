@@ -1,0 +1,310 @@
+@import url(../fonts/e-UkraineHead-Regular.otf);
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* СкроллБар */
+
+
+*:root {
+
+    --scrollbarThumb:
+
+        rgba(117, 108, 108, 0.624);
+    --scrollbarWidth: 16px;
+    --scrollbarBorder: 3px solid var(--scrollbarBg);
+}
+
+*::-webkit-scrollbar {
+    width: var(--scrollbarWidth);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbarBg);
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarThumb);
+
+    border: var(--scrollbarBorder);
+}
+
+
+
+
+header {
+    width: 100%;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    background: url(../image/background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1920px;
+    max-height: 1920px;
+    font-family: 'e-Ukraine';
+}
+
+/* Header */
+
+
+.info {
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__text {
+    color: #fff;
+    padding: 0px 50px 0 0;
+    font-size: 10pt;
+}
+
+
+/* Поле навигации */
+
+
+.nav {
+    width: 100%;
+    height: 100px;
+    background: rgb(0 0 0 / 50%);
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__title {
+    margin: 0px 60px 5px 0px;
+}
+
+.title {
+    color: #fff;
+    font-size: 40pt;
+    font-weight: bold;
+    margin: 0px 60px 5px 0px;
+}
+
+.nav__menu {
+    display: flex;
+    padding: 0px 0px 0px 0;
+    margin: 0 0px 0px 0px;
+    align-items: center;
+}
+
+.item-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 25px 0 0;
+    align-items: center;
+}
+
+.link-menu {
+    display: flex;
+    font-size: 17px;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.item-menu::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 20px;
+    border-radius: 20px;
+    background: #fff;
+    visibility: hidden;
+    margin: 1px 0 0px 0;
+    transition: .2s;
+}
+
+.item-menu:hover::after {
+    width: 45px;
+    visibility: visible;
+    transition: ease-out .8s;
+}
+
+
+/* Подвал */
+
+footer {
+    width: 100%;
+}
+
+
+.footer__body {
+    display: flex;
+    padding: 53px 0 0 0;
+    align-items: flex-start;
+}
+
+.footer {
+    width: 100%;
+    height: 330px;
+    background: rgb(0 0 0 / 50%);
+    display: flex;
+    margin: 600px 0 0 0;
+    justify-content: center;
+}
+
+.footer__title {
+    display: flex;
+}
+
+.footer__menu {
+    display: flex;
+    padding: 25px 0 0 0;
+}
+
+.ps {
+    height: 70px;
+    display: flex;
+    width: 100%;
+    color: #fff;
+    font-size: 9pt;
+    background: rgb(0 0 0 / 50%);
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* Основной контент */
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+
+.block {
+    display: flex;
+    margin-top: 75px;
+    justify-content: center;
+}
+
+
+/* Иконка */
+
+.block-icon {
+    display: grid;
+    background: #fff;
+    border-radius: 10px;
+    width: 325px;
+    height: 325px;
+    justify-items: center;
+}
+
+
+.block-icon h1 {
+    display: flex;
+    font-size: 98pt;
+}
+
+.red {
+    color: red;
+}
+
+.block-icon p {
+    display: flex;
+    font-size: 10pt;
+    color: #737373;
+}
+
+.icon {
+    display: flex;
+    margin-bottom: -57px;
+}
+
+
+.block-info {
+    display: flex;
+    width: 780px;
+    height: 325px;
+    background: #fff;
+    border-radius: 10px;
+    margin-left: 30px;
+    text-align: start;
+    font-size: 1em;
+    align-items: center;
+}
+
+.block-info p {
+    display: flex;
+    margin-left: 20px;
+    color: #737373;
+}
+
+
+/* Батоны */
+
+.btn-load {
+    display: flex;
+    margin-top: 18px;
+    justify-content: center;
+}
+
+.btn-download {
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.btn-download button {
+    border: none;
+    width: 557.5px;
+    height: 48px;
+    background-color: #ff2a00;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 13pt;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.btn-download button:hover {
+    background-color: rgb(255 42 0 /80%);
+}
+
+.btn-social button {
+    border: none;
+    width: 557.5px;
+    height: 48px;
+    background-color: #fff;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 13pt;
+    font-weight: bold;
+    color: #737373;
+    cursor: pointer;
+}
+
+.btn-social button:hover {
+    background-color: rgba(255, 255, 255, 0.535);
+
+}

@@ -1,0 +1,1148 @@
+@import url(../fonts/e-UkraineHead-Regular.otf);
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* СкроллБар */
+
+
+*:root {
+
+    --scrollbarThumb:
+
+        rgba(117, 108, 108, 0.624);
+    --scrollbarWidth: 16px;
+    --scrollbarBorder: 3px solid var(--scrollbarBg);
+}
+
+*::-webkit-scrollbar {
+    width: var(--scrollbarWidth);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbarBg);
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarThumb);
+
+    border: var(--scrollbarBorder);
+}
+
+
+
+
+header {
+    width: 100%;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    background: url(../image/background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1920px;
+    max-height: 1920px;
+    font-family: 'e-Ukraine';
+}
+
+/* Header */
+
+
+.info {
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__text {
+    color: #fff;
+    padding: 0px 50px 0 0;
+    font-size: 10pt;
+}
+
+
+/* Поле навигации */
+
+
+.nav {
+    width: 100%;
+    height: 100px;
+    background: rgb(0 0 0 / 50%);
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__title {
+    margin: 0px 60px 5px 0px;
+}
+
+.title {
+    color: #fff;
+    font-size: 40pt;
+    font-weight: bold;
+    margin: 0px 60px 5px 0px;
+}
+
+.nav__menu {
+    display: flex;
+    padding: 0px 0px 0px 0;
+    margin: 0 0px 0px 0px;
+    align-items: center;
+}
+
+.item-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 25px 0 0;
+    align-items: center;
+}
+
+.link-menu {
+    display: flex;
+    font-size: 17px;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.item-menu::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 20px;
+    border-radius: 20px;
+    background: #fff;
+    visibility: hidden;
+    margin: 1px 0 0px 0;
+    transition: .2s;
+}
+
+.item-menu:hover::after {
+    width: 45px;
+    visibility: visible;
+    transition: ease-out .8s;
+}
+
+
+/* Подвал */
+
+footer {
+    width: 100%;
+}
+
+
+.footer__body {
+    display: flex;
+    padding: 53px 0 0 0;
+    align-items: flex-start;
+}
+
+.footer {
+    width: 100%;
+    height: 330px;
+    background: rgb(0 0 0 / 50%);
+    display: flex;
+    margin: 200px 0 0 0;
+    justify-content: center;
+}
+
+.footer__title {
+    display: flex;
+}
+
+.footer__menu {
+    display: flex;
+    padding: 25px 0 0 0;
+}
+
+.ps {
+    height: 70px;
+    display: flex;
+    width: 100%;
+    color: #fff;
+    font-size: 9pt;
+    background: rgb(0 0 0 / 50%);
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* Основной контент */
+
+main {
+    width: 100%;
+    /* height: 100%; */
+}
+
+/* .tabs {
+    display: flex;
+} */
+
+.tabs__menu {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+
+/* Батон меню */
+
+.tabs__menu input {
+    margin-right: 10px;
+    display: flex;
+    border: none;
+    background: #fff;
+    border-radius: 7px;
+    width: 180px;
+    height: 50px;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tabs__menu input:hover {
+    color: #42b3ad;
+    transition: .3s;
+}
+.menu-tab{
+    
+display: flex;
+    
+justify-content: center;
+}
+
+
+
+
+/* Блок с выпадающим меню */
+
+
+
+.menu__server-drop {
+    max-width: 1140px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.menu__console-drop {
+    max-width: 1140px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.menu__donate-drop {
+    max-width: 1140px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.menu__promo-drop {
+    max-width: 1140px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.menu__rules-drop {
+    max-width: 1140px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.menu__banner-drop {
+    height: 50px;
+    max-width: 1140px;
+    margin-top: 30px;
+}
+
+.active {
+    color: #42b3ad
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+.server-drop__boxline-one {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 0px 0px 0px;
+}
+
+
+
+.boxline-one__inpute-search__server input {
+    margin: 0 15px 0px 0px;
+}
+
+.boxline-three__output__server {
+    display: flex;
+    background: #c5d0cf;
+    width: 1140px;
+    height: 435px;
+    border-radius: 9px;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------------ */
+/* Промокоды */
+
+
+
+
+.block1-promo {
+    display: flex;
+    max-width: 1140px;
+    height: 50px;
+    justify-content: space-between;
+}
+
+
+.name-promo input {
+    border: none;
+    outline: none;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 9px;
+    width: 450px;
+}
+
+
+
+
+
+.sum-promo input {
+    width: 450px;
+    outline: none;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 9px;
+    border: none;
+}
+
+
+
+.btn-promo button {
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+    border-radius: 7px;
+    font-family: e-Ukraine;
+    font-size: 9pt;
+}
+
+
+
+.block2-promo {
+
+    display: flex;
+}
+
+.promo-switch {
+    display: flex;
+    padding: 0;
+    width: 1140px;
+    height: 21px;
+    margin-top: 10px;
+    margin-left: 100px;
+    justify-content: center;
+}
+
+.checkbox-promo {
+    margin-left: 90px;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 21px;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.checkbox-promo .checkbox-promo-switch {
+    display: inline-block;
+    width: 50px;
+    height: 21px;
+    border-radius: 20px;
+    position: relative;
+    background: #acacac;
+    transition: .2s;
+}
+
+
+.checkbox-promo .checkbox-promo-switch:before {
+    content: '';
+    display: inline-block;
+    display: flex;
+    width: 18px;
+    left: 3px;
+    height: 18px;
+    position: absolute;
+    bottom: 2px;
+    background: #5b5b5b;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+
+.checkbox-promo input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* .checkbox-promo input[type=checkbox]:checked+.checkbox-promo-switch {
+    background: rgb(60 99 97);
+} */
+
+.checkbox-promo input[type=checkbox]:checked+.checkbox-promo-switch:before {
+    background: #00d96b;
+    transform: translateX(27px);
+}
+
+.checkbox-promo-switch p {
+    margin: 1px 54px;
+    cursor: default;
+    color: black;
+    font-size: 11pt;
+}
+
+/* Hover */
+
+.checkbox-promo input[type="checkbox"]:not(:disabled)+.checkbox-promo-switch {
+    cursor: pointer;
+}
+
+/* Выключенные тумблера */
+
+.checkbox-promo input[type=checkbox]:disabled+.checkbox-promo-switch {
+    filter: grayscale(60%);
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.checkbox-promo input[type=checkbox]:disabled+.checkbox-promo-switch:before {
+    background: #399994;
+}
+
+
+
+.checkbox-promo p {
+    display: flex;
+    position: absolute;
+    margin: -21px 0 0 -65px;
+    font-size: 9pt;
+}
+
+/* ______________________________________________конец тумблера */
+
+
+
+.block-promo__ready {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    max-width: 1140px;
+    margin: 20px 0 0 0;
+}
+
+.promo-ready__box__one {
+    background: #fff;
+    width: 450px;
+    height: 50px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+}
+
+.one-title {
+    font-size: 8pt;
+    padding: 0px 0px 0px 10px;
+}
+
+
+.promo-ready__box__two {
+    background: #fff;
+    height: 50px;
+    width: 450px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+}
+
+.two-title {
+    padding: 0 0 0 10px;
+    font-size: 8pt;
+}
+
+
+
+.promo-ready__btn button {
+    border: none;
+    border-radius: 9px;
+    width: 180px;
+    height: 50px;
+    font-family: e-Ukraine;
+    font-size: 9pt;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+/* ДОНАТ ДРОП */
+
+.donate-drop__boxline-one {
+    display: flex;
+    width: 1140px;
+    height: 50px;
+    justify-content: flex-end;
+}
+
+.boxline-one__inpute-search {
+    margin: 0px 15px 0px 0px;
+}
+
+.searchname {
+    border: none;
+    height: 50px;
+    border-radius: 9px;
+    width: 240px;
+    padding: 0px 0px 0px 10px;
+    outline: none;
+}
+
+
+.boxline-one__btn button {
+    border: none;
+    width: 180px;
+    height: 50px;
+    border-radius: 9px;
+    font-size: 10pt;
+    cursor: pointer;
+    font-family: e-Ukraine;
+}
+
+.boxline-two-switch {
+    display: flex;
+    /* width: 535px; */
+    margin: 20px 0px 55px 450px;
+    justify-content: center;
+}
+
+
+
+.checkbox-donate {
+    position: relative;
+    display: inline-block;
+    margin: 0px 0 0px 100px;
+    width: 50px;
+    height: 21px;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.checkbox-donate .checkbox-donate-switch {
+    display: inline-block;
+    width: 50px;
+    height: 21px;
+    border-radius: 20px;
+    position: relative;
+    background: #c4d0cf;
+    transition: .2s;
+}
+
+
+.checkbox-donate .checkbox-donate-switch:before {
+    content: '';
+    display: inline-block;
+    display: flex;
+    width: 18px;
+    left: 3px;
+    height: 18px;
+    position: absolute;
+    bottom: 2px;
+    background: #7b7b7b;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+
+.checkbox-donate input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* .checkbox-donate input[type=checkbox]:checked+.checkbox-donate-switch {
+    background: rgb(60 99 97);
+} */
+
+.checkbox-donate input[type=checkbox]:checked+.checkbox-donate-switch:before {
+    background: #00d96b;
+    transform: translateX(27px);
+}
+
+.checkbox-donate-switch p {
+    margin: 1px 54px;
+    cursor: default;
+    color: black;
+    font-size: 11pt;
+}
+
+/* Hover */
+
+.checkbox-donate input[type="checkbox"]:not(:disabled)+.checkbox-donate-switch {
+    cursor: pointer;
+}
+
+/* Выключенные тумблера */
+
+.checkbox-donate input[type=checkbox]:disabled+.checkbox-donate-switch {
+    filter: grayscale(60%);
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.checkbox-donate input[type=checkbox]:disabled+.checkbox-donate-switch:before {
+    background: #399994;
+}
+
+
+.checkbox-donate p {
+    margin: -20px 0 0 -60px;
+    position: absolute;
+    font-size: 10pt;
+}
+
+
+
+.boxline-three__output {
+    display: flex;
+    background: #fff;
+    max-width: 1140px;
+    height: 435px;
+    overflow: auto;
+    border-radius: 9px;
+}
+
+.window-output {
+    display: flex;
+    padding: 0px 0px 0px 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.output-text {
+    color: #8a8a8a;
+    font-size: 9pt;
+}
+
+.boxline-four {
+    display: flex;
+    margin: 50px 0 0 0;
+    background: rgb(196, 208, 207, 70%);
+    width: 1140px;
+    height: 400px;
+    border-radius: 9px;
+}
+
+.donate-info {
+    display: flex;
+    max-width: 1140px;
+    height: 400px;
+    padding: 25px 209px 0 30px;
+}
+
+.donat-info-item {
+
+    display: flex;
+
+    color: #585e5d;
+
+    font-size: 11pt;
+
+    margin: 0px 0 0 50px;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+/* Консоль */
+
+.console-console__boxline-one {
+    display: flex;
+    height: 50px;
+    margin: 20px 0 0 0;
+    justify-content: flex-end;
+}
+
+
+.boxline-one__inpute-search__console {
+    margin: 0 0 0px 0px;
+}
+
+.boxline-one__inpute-search__console input {
+    margin: 0px 15px 0px 0px;
+}
+
+
+.boxline-one__btn-console button {
+    border: none;
+    cursor: pointer;
+    border-radius: 9px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    font-family: e-Ukraine;
+}
+
+.window-output__console {
+    display: flex;
+    width: 1115px;
+    height: 435px;
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 9px;
+    padding: 20px 0px 0px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.output-text__console {
+    color: #8a8a8a;
+    font-size: 10pt;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+/* Управление правами */
+
+
+
+.rules-block1 {
+    display: flex;
+    width: 1140px;
+    height: 50px;
+    justify-content: space-between;
+}
+
+
+/* Форма */
+
+
+
+.form-rules-link-vk input {
+    /* padding: 15px; */
+    border: none;
+    width: 420px;
+    height: 50px;
+    border-radius: 9px;
+    outline: none;
+}
+
+/* Статус с переключателями*/
+
+.rules-status {
+    display: flex;
+}
+
+.switch-status {
+    display: flex;
+    width: 420px;
+    height: 50px;
+    background: #fff;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.checkbox-status-switch {
+    display: flex;
+}
+
+
+.checkbox-status {
+    position: relative;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.checkbox-status .checkbox-status-switch {
+    width: 50px;
+    height: 21px;
+    border-radius: 20px;
+    position: relative;
+    background: #acacac;
+    transition: .2s;
+}
+
+
+.checkbox-status .checkbox-status-switch:before {
+    content: '';
+    display: inline-block;
+    display: flex;
+    width: 18px;
+    left: 3px;
+    height: 18px;
+    position: absolute;
+    bottom: 2px;
+    background: #5b5b5b;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+
+.checkbox-status input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox-status input[type=checkbox]:checked+.checkbox-status-switch {
+    background: #ffa08d;
+}
+
+.checkbox-status input[type=checkbox]:checked+.checkbox-status-switch:before {
+    background: #e52600;
+    transform: translateX(27px);
+}
+
+.switch-status p {
+    display: flex;
+    font-size: 9pt;
+    margin: -18px -50px 0px;
+}
+
+/*Кнопа добавления пользака*/
+
+
+.btn__add-user button {
+    width: 255px;
+    cursor: pointer;
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+    background: #fff;
+    font-weight: bold;
+    font-family: e-Ukraine;
+}
+
+
+/* Блок с выбором сервака под блоком со статусом */
+
+
+.rules-block2 {
+    display: flex;
+    margin-top: 25px;
+    width: 1140px;
+    margin-left: 85px;
+    height: 50px;
+    justify-content: center;
+}
+
+.choice-server {
+    display: flex;
+    background: #fff;
+    border-radius: 9px;
+}
+
+.switch-server {
+    width: 420px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.checkbox-server {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.checkbox-server .checkbox-server-switch {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+    background: #fff;
+    transition: .2s;
+}
+
+
+.checkbox-server .checkbox-server-switch:before {
+    content: '';
+    display: inline-block;
+    display: flex;
+    width: 16px;
+    left: 1px;
+    height: 16px;
+    position: absolute;
+    bottom: 2px;
+    background: #5b5b5b;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+
+.checkbox-server input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* .checkbox-server input[type=checkbox]:checked+.checkbox-server-switch {
+    background: rgb(60 99 97);
+} */
+
+.checkbox-server input[type=checkbox]:checked+.checkbox-server-switch:before {
+    background: #00d96b;
+    transform: translateX(17px);
+}
+
+.checkbox-server p {
+    margin: -20px 0px 0px -15px;
+    position: absolute;
+    cursor: default;
+    font-size: 9pt;
+    color: #737373;
+}
+
+
+
+/* Карточки */
+
+.rules-block3 {
+    display: flex;
+    margin-top: 25px;
+    width: 1140px;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.form-rules-vk {
+
+    display: flex;
+}
+
+
+.form-rules-vk input {
+    /* padding: 15px; */
+    border: none;
+    background: #fff;
+    width: 420px;
+    height: 50px;
+    border-radius: 9px;
+    outline: none;
+    text-align: initial;
+    font-weight: 600;
+}
+
+/* Статус с переключателями*/
+
+.rules-status-card {
+    display: flex;
+}
+
+.switch-status-card {
+    display: flex;
+    width: 420px;
+    height: 50px;
+    background: #fff;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.checkbox-status-switch-card {
+    display: flex;
+}
+
+
+.checkbox-status-card {
+    position: relative;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.checkbox-status-card .checkbox-status-switch-card {
+    width: 50px;
+    outline: none;
+    height: 21px;
+    border-radius: 20px;
+    position: relative;
+    /* background: #acacac; */
+    transition: .2s;
+    border: 1px solid #000;
+}
+
+
+.checkbox-status-card .checkbox-status-switch-card:before {
+    content: '';
+    display: inline-block;
+    display: flex;
+    width: 18px;
+    left: 3px;
+    height: 18px;
+    position: absolute;
+    bottom: 2px;
+    background: #5b5b5b;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+
+.checkbox-status-card input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* .checkbox-status-card input[type=checkbox]:checked+.checkbox-status-switch-card {
+    background: #ffa08d;
+} */
+
+.checkbox-status-card input[type=checkbox]:checked+.checkbox-status-switch-card:before {
+    background: #00d96b;
+    transform: translateX(27px);
+}
+
+.switch-status-card p {
+    display: flex;
+    font-size: 9pt;
+    margin: -18px -50px 0px;
+}
+
+/*Кнопа добавления пользака*/
+
+
+
+.btn__add-user__card button {
+    width: 255px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    background: #fff;
+    font-weight: bold;
+    font-family: e-Ukraine;
+}
+
+.counter-user {
+    display: flex;
+    width: 1140px;
+    margin: 60px 0px 5px 0px;
+    justify-content: center;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+
+/* Смена Баннера */
+
+
+
+.form-banner {
+    display: flex;
+    position: relative;
+}
+
+.form-banner form {
+    margin-right: 10px;
+}
+
+.form-banner input {
+    display: flex;
+    width: 937px;
+    height: 48px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+}
+
+.form-banner .save-button {
+    width: 180px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    text-align: center;
+    font-family: e-Ukraine;
+    font-size: 9pt;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
